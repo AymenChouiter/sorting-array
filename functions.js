@@ -3,6 +3,12 @@ function swap(table,fir,sec){
     table[fir] = table[sec]
     table[sec] = temp
 }
+
+
+
+
+
+
 function merget(Vec, left, mid, right) {
     let size = right - left
     let output = new Array(size);
