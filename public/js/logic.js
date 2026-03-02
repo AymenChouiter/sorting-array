@@ -211,7 +211,7 @@ class SortingViewController {
     sendSortingRequest(sortingConfig) {
         const urlData = encodeURIComponent(JSON.stringify(sortingConfig));
         const eventSource = new EventSource(
-            `https://sortarr.onrender.com:8000/sort/${this.selectedAlgorithmName}?data=${urlData}`
+            `https://sortarr.onrender.com/sort/${this.selectedAlgorithmName}?data=${urlData}`
         );
 
         eventSource.onmessage = (event) => {
