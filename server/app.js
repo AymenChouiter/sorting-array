@@ -5,12 +5,11 @@
  */
 const express = require('express');
 const path = require('path');
-
 const cors = require('cors');
-app.use(cors());
 
 const app = express();
 
+app.use(cors());
 // Route layer responsible for sorting-related HTTP endpoints.
 const sortingRoutes = require('./routes/itemRoutes');
 
