@@ -1,0 +1,48 @@
+<!--
+    View (HTML) - Sorting Visualizer
+    - Renders the main UI for entering arrays, choosing algorithms, and displaying sorting steps.
+    - Works together with style.css (View styles) and logic.js (View Controller).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Main input + controls section (array input and algorithm picker) -->
+    <section class="inputs">
+        <array id="array-visualizer">
+            <span class="array-bracket">[</span>
+            <div class="last-index">
+                <input autofocus onkeydown="sortingViewController.handleInputKeydown(event)" type="number" id="array-input">
+                <span class="array-bracket">]</span>
+            </div>
+        </array>
+        <!-- Algorithm picker + sort trigger -->
+        <sortMethode>
+            <div class="algo-picker">
+                <button type="button" class="algo-trigger" aria-haspopup="true" aria-expanded="false">Select Algorithm</button>
+                <div class="algo-choices">
+                    <span class="choice" onclick="sortingViewController.handleAlgorithmChoice(this)">Bubble</span>
+                    <span class="choice" onclick="sortingViewController.handleAlgorithmChoice(this)">Selection</span>
+                    <span class="choice" onclick="sortingViewController.handleAlgorithmChoice(this)">Insertion</span>
+                    <span class="choice" onclick="sortingViewController.handleAlgorithmChoice(this)">Merge</span>
+                    <span class="choice" onclick="sortingViewController.handleAlgorithmChoice(this)">Quick</span>
+                </div>
+            </div>
+            <span class="choice sort-button" onclick="sortingViewController.startSorting()">Sort</span>
+        </sortMethode>
+    </section>
+
+    <!-- Sorting result section: step-by-step array snapshots -->
+    <result id="sorting-result-section">
+        <arrays id="sorting-steps-container">
+            <div class="sorting-step" id="sorting-step"></div>
+        </arrays>
+    </result>
+</body>
+<script src="js/logic.js"></script>
+</html>
