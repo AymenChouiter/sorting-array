@@ -2,7 +2,7 @@
 
 # Real-Time Algorithm Visualizer Using SSE Technologies⚡
 
-Visual, step-by-step sorting animations powered by **Node.js**, **Express**, and **<a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events" target="_blank">Server‑Sent Events (SSE)</a>**.
+Visual, step-by-step sorting animations powered by **Node.js**, **Express**, and **Server‑Sent Events (SSE)**.
 
 </div>
 
